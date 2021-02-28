@@ -1,0 +1,162 @@
+/*
+ * Removes box shadow from expanded data table rows
+ */
+.v-data-table tbody tr.v-data-table__expanded__content {
+  box-shadow: none !important;
+}
+
+/*
+ *
+ */
+.custom--expanded-table {
+  margin-left: 6px;
+
+  tr > td:nth-child(1) {
+    width: 80px;
+  }
+}
+
+/*
+ * Align card title icons
+ */
+.v-card__title > i.v-icon {
+  padding-right: 5px;
+  color: inherit;
+}
+
+/*
+ * Align dense list item icon
+ */
+.v-list--dense .v-list-item .v-list-item__icon .v-icon {
+  position: relative;
+  top: 8px;
+  left: 14px;
+}
+
+/*
+ * Card titles should word break
+ */
+.v-card__text, .v-card__title {
+  word-break: normal;
+}
+
+/*
+ * Prevent card titles with links from being underlined
+ */
+.v-list-item__title > a {
+  text-decoration: none;
+}
+
+/*
+ * Components use .card-active and .card-inactive to color the left border depending on their state
+ */
+.border-active {
+  border-left: 5px #4caf50 solid !important;
+}
+
+.border-inactive {
+  border-left: 5px #607d8b solid !important;
+}
+
+.border-ok {
+  border-left: 5px #4caf50 solid !important;
+}
+
+.border-notok {
+  border-left: 5px #f44336 solid !important;
+}
+
+.border-error {
+  border-left: 5px #f44336 solid !important;
+}
+
+.border-unknown {
+  border-left: 5px #fb8c00 solid !important;
+}
+
+/*
+ * Adjust list item padding so border fills top to bottom
+ * Make sure last list item's border has a radius on the lower left
+ */
+div.v-sheet.v-list {
+  padding: 0;
+}
+div.v-sheet.v-list > .v-list-item:nth-last-child(1) {
+  border-radius: 0 0 0 3px;
+}
+
+/*
+ * Smaller card titles.
+ * !important is set because vuetify already as an !important style applied
+ */
+.v-application div.v-application--wrap main.v-content div.container div.col div.v-card .title {
+  font-size: 1rem !important;
+}
+
+/*
+ * Radius classes to round card header images on the top but flatten them on the bottom
+ */
+.v-application .border_radius_bottom_none {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.v-application .border_radius_top_inherit {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+
+/*
+ * Moves text 2px to the top.
+ * Used with v-icon to align with text on same row
+ */
+.inline {
+  margin-bottom: 2px;
+}
+
+.inline-small {
+  margin-bottom: 1px;
+}
+
+/*
+ * Fixes masonry layout in Firefox
+ * Without this there would only be one column: https://github.com/desandro/masonry/issues/1057#issuecomment-406549390
+ */
+.masonry-item {
+  float: left;
+}
+
+/*
+ * Custom types for v-skeleton-loader
+ */
+.v-skeleton-loader__autocomplete {
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  width: 100%;
+  height: 48px;
+  margin-bottom: 30px;
+}
+
+.v-application {
+  .overline.overline-inline {
+    line-height: inherit !important;
+  }
+}
+
+.v-tab.tab-vertical-large {
+  justify-content: left;
+}
+
+/*
+ * Spacing only between elements but not on first or last
+ */
+.spacing-1 + .spacing-1 {
+  margin-left: 4px;
+}
+
+.card-background-image {
+  height: 120px;
+  background-color: #e65100;
+  background-position: top center;
+}
